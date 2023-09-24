@@ -1,14 +1,16 @@
 const User = require('../models/User');
 const { StatusCodes } = require('http-status-codes');
 const CustomError = require('../errors');
-const { createJWT, isTokenValid, attachCookiesToResponse } = require('../utils');
+const { attachCookiesToResponse } = require('../utils');
 
 
 const register = async (req, res) => {
     const { name, email, password } = req.body;
     const newUser = await User.create({ name, email, password });
 
-    attachCookiesToResponse({ res, userId: newUser._id });
+    const tokenUser = { userId: newUser._id, name: newUser.name, role: newUser.role };
+    attachCookiesToResponse({ res, user: tokenUser });
+
     res.status(StatusCodes.CREATED).json({ user: { userId: newUser._id, name: newUser.name, email: newUser.email } });
 };
 
@@ -30,7 +32,9 @@ const login = async (req, res) => {
     if (!isPasswordCorrect) {
         throw new CustomError.UnauthenticatedError('Invalid Credentials');
     }
-    attachCookiesToResponse({ res, userId: user._id });
+
+    const tokenUser = { userId: user._id, name: user.name, role: user.role };
+    attachCookiesToResponse({ res, user: tokenUser });
 
     res.status(StatusCodes.OK).json({ user: { userId: user._id, name: user.name, email: user.email } });
 };

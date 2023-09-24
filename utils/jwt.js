@@ -10,8 +10,8 @@ const isTokenValid = (token) => {
     return jwt.verify(token, process.env.JWT_SECRET);
 };
 
-const attachCookiesToResponse = ({ res, userId }) => {
-    const token = createJWT({ userId });
+const attachCookiesToResponse = ({ res, user }) => {
+    const token = createJWT({ payload: user });
 
     res.cookie('token', token, {
         httpOnly: true,
