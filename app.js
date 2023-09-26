@@ -13,6 +13,7 @@ app.use(cookieParser(process.env.JWT_SECRET));
 // routers
 const authRouter = require('./routes/authRoutes');
 const userRouter = require('./routes/userRoutes');
+const productRouter = require('./routes/productRoutes');
 
 const { authenticateUser } = require('./middleware/authentication');
 const notFoundMiddleware = require('./middleware/not-found');
@@ -27,6 +28,7 @@ app.get('/api/v1', (req, res) => {
 });
 app.use('/api/v1/auth', authRouter);
 app.use('/api/v1/users', authenticateUser, userRouter);
+app.use('/api/v1/products', productRouter);
 
 
 app.use(notFoundMiddleware);
