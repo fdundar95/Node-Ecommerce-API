@@ -23,13 +23,13 @@ const ProductSchema = new mongoose.Schema({
     category: {
         type: String,
         required: [true, 'Please provide product category'],
-        enum: ['office', 'kitchen', 'bedroom']
+        enum: ['Time-Travel Gadgets', 'Steampunk Wonders', 'Historical Fashion', 'Quantum Curiosities']
     },
     company: {
         type: String,
         required: [true, 'Please provide product company'],
         enum: {
-            values: ['ikea', 'liddy', 'marcos'],
+            values: ['ChronoTech Ltd', 'EonVision Corp', 'QuantaCraft', 'EpochWear Inc.'],
             message: '{VALUE} is not supported'
         }
     },
@@ -42,20 +42,20 @@ const ProductSchema = new mongoose.Schema({
         type: Boolean,
         default: false
     },
-    freeShipping: {
+    shipping: {
         type: Boolean,
         default: false
     },
-    inventory: {
+    stock: {
         type: Number,
         required: true,
         default: 15
     },
-    averageRating: {
+    stars: {
         type: Number,
         default: 0
     },
-    numOfReviews: {
+    reviews: {
         type: Number,
         default: 0
     },

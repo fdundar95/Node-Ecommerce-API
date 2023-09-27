@@ -4,11 +4,14 @@ const app = express();
 require('express-async-errors');
 const morgan = require('morgan');
 const cookieParser = require('cookie-parser');
+const fileUpload = require('express-fileupload');
 
 const connectDB = require('./db/connect');
 app.use(morgan('dev'));
 app.use(express.json());
 app.use(cookieParser(process.env.JWT_SECRET));
+app.use(express.static('./public'));
+app.use(fileUpload({ useTempFiles: true }));
 
 // routers
 const authRouter = require('./routes/authRoutes');

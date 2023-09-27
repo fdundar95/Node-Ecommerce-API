@@ -1,0 +1,52 @@
+
+Kontrol Paneli Bilgileriniz
+
+Kullanıcı: margsigo
+Şifreniz  : QDvhoz1D#8lD
+Kontrol Paneli URL: https://cp58.servername.co:2083/
+
+
+FTP Bilgileriniz
+
+Kullanıcı: margsigo
+Şifreniz  : QDvhoz1D#8lD
+FTP Sunucusu: cp58.servername.co
+FTP Port: 21
+
+Name Server Bilgileri
+
+Nameserver 1: ns58.tr.dnsowner.com 
+Nameserver 2: ns59.tr.dnsowner.com
+
+
+Sonraki Ödeme Tarihi 02/06/2023
+
+E-posta Yapılandırması
+
+SMTP Bilgileri
+
+Giden gelen sunucu: cp58.servername.co
+
+Giden port: 587
+
+Smtp auth (kimlik doğrulama): Aktif
+
+ssl: kapalı
+
+
+IMAP Bağlantı Bilgileri
+
+Sunucu: cp58.servername.co
+
+Şifreleme Yöntemi: TLS
+
+Port olarak 143 giriniz.
+
+
+POP3 Bağlantı Bilgileri
+
+Sunucu: cp58.servername.co
+
+Şifreleme Yöntemi: TLS
+
+Port olarak 110 giriniz.

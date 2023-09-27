@@ -1,38 +1,67 @@
 [
   {
-    "name": "accent chair",
-    "price": 25999,
-    "image": "https://dl.airtable.com/.attachmentThumbnails/e8bc3791196535af65f40e36993b9e1f/438bd160",
-    "colors": ["#ff0000", "#00ff00", "#0000ff"],
-    "company": "marcos",
-    "description": "Cloud bread VHS hell of banjo bicycle rights jianbing umami mumblecore etsy 8-bit pok pok +1 wolf. Vexillologist yr dreamcatcher waistcoat, authentic chillwave trust fund. Viral typewriter fingerstache pinterest pork belly narwhal. Schlitz venmo everyday carry kitsch pitchfork chillwave iPhone taiyaki trust fund hashtag kinfolk microdosing gochujang live-edge",
-    "category": "office"
+    "name": "Chrono Compass",
+    "price": 25000,
+    "featured": false,
+    "stock": 8,
+    "image": "https://v5.airtableusercontent.com/v1/20/20/1692720000000/6YfWUuLVNA_j8Hy5a0dZ2A/Q68d8e-_J3i8XmypCuz84kkOypgnI8qIRd8UXbMOHJFCNsS39ecIk9P_07lu0K9slKwcjE7jELZTz8qwKM-VNAMnu9D3OefQjZVBWlxOVuH7TGMtozhmslwmeM0p_KqacWoor69lDzGGj4his1u4og/sT7b1H88GqNpXOhPttKH24BH4hcrOVCqMs-W0QF5bLU",
+    "category": "Time-Travel Gadgets",
+    "description": "Navigate time's intricate pathways with the Chrono Compass. Crafted by ChronoTech, this whimsical yet precise gadget ensures you're always on schedule, no matter the era. It's your ultimate guide through the tides of history. Time travel? Now as easy as reading a compass!",
+    "colors": [
+      "#8A4DFE"
+    ],
+    "company": "ChronoTech Ltd",
+    "stars": 4.5,
+    "reviews": 154,
+    "shipping": true
   },
   {
-    "name": "albany sectional",
-    "price": 109999,
-    "image": "https://dl.airtable.com/.attachmentThumbnails/0be1af59cf889899b5c9abb1e4db38a4/d631ac52",
-    "colors": ["#000", "#ffb900"],
-    "company": "liddy",
-    "description": "Cloud bread VHS hell of banjo bicycle rights jianbing umami mumblecore etsy 8-bit pok pok +1 wolf. Vexillologist yr dreamcatcher waistcoat, authentic chillwave trust fund. Viral typewriter fingerstache pinterest pork belly narwhal. Schlitz venmo everyday carry kitsch pitchfork chillwave iPhone taiyaki trust fund hashtag kinfolk microdosing gochujang live-edge",
-    "category": "kitchen"
+    "name": "Era-Adjustable Sunglasses",
+    "price": 18000,
+    "featured": false,
+    "stock": 12,
+    "image": "https://v5.airtableusercontent.com/v1/20/20/1692720000000/mvUlRwGjymgiJTPt0VDJbw/7LhZwaJKSwp3C1cV_ibpP3Wvl7RKv6QEVjz_gi8VbhW009E3-baV3Bt-HyemK9o9vqloi-qZmSuEuyEvECxXSW2sIAVPEqfToCU9epCrWoAz6q3srldtBLwrrj5TYhpC4GskoAEWdIZkjFXCaWGjhw/b9Fixdj246O5jEm0syxPvN100E_IIqWbtNh6DuCJQhc",
+    "category": "Steampunk Wonders",
+    "description": "Stay effortlessly cool through centuries with Era-Adjustable Sunglasses from EonVision Corp. Whether facing blazing medieval suns or futuristic neon skies, these shades adapt to every era's glare. The future's so bright, you gotta wear shades, one size fits all.",
+    "colors": [
+      "#FFC300",
+      "#8A4DFE"
+    ],
+    "company": "EonVision Corp",
+    "stars": 1.0,
+    "reviews": 43
   },
   {
-    "name": "armchair",
-    "price": 12599,
-    "image": "https://dl.airtable.com/.attachmentThumbnails/530c07c5ade5acd9934c8dd334458b86/cf91397f",
-    "colors": ["#000", "#00ff00", "#0000ff"],
-    "company": "marcos",
-    "description": "Cloud bread VHS hell of banjo bicycle rights jianbing umami mumblecore etsy 8-bit pok pok +1 wolf. Vexillologist yr dreamcatcher waistcoat, authentic chillwave trust fund. Viral typewriter fingerstache pinterest pork belly narwhal. Schlitz venmo everyday carry kitsch pitchfork chillwave iPhone taiyaki trust fund hashtag kinfolk microdosing gochujang live-edge",
-    "category": "bedroom"
+    "name": "Quantum Pocket Watch",
+    "price": 32000,
+    "featured": false,
+    "stock": 0,
+    "image": "https://v5.airtableusercontent.com/v1/20/20/1692720000000/DAfT_acjVbxaKNhsqbaCbg/jj08xiTZgYuwrt6q1EH2IU_yHoGV38EUQWBUOtGgpMfId4k1m8vi99s2sMYGQoZMdhcfKQtKdgNoDBnjUG5Tq9OXf1aq51d4c-lE7Po-f96RlOdW_YRVUwtlAif_BlQti0V0argu9hVvkaDGOditAA/wryt4v0X3nKb5ND79pWx7DPW4oIKmekeZtc2uqV-_YE",
+    "category": "Historical Fashion",
+    "description": "Count down moments with style using the Quantum Pocket Watch. QuantaCraft's creation melds classic elegance with futuristic precision, offering a timepiece that's truly timeless. The perfect accessory for chrono-enthusiasts and retro-futurists alike.",
+    "colors": [
+      "#F39C12",
+      "#8E44AD"
+    ],
+    "company": "QuantaCraft",
+    "stars": 4.0,
+    "reviews": 41,
+    "shipping": true
   },
   {
-    "name": "emperor bed",
-    "price": 23999,
-    "image": "https://dl.airtable.com/.attachmentThumbnails/0446e84c5bca9643de3452a61b2d6195/1b32f48b",
-    "colors": ["#0000ff", "#000"],
-    "company": "ikea",
-    "description": "Cloud bread VHS hell of banjo bicycle rights jianbing umami mumblecore etsy 8-bit pok pok +1 wolf. Vexillologist yr dreamcatcher waistcoat, authentic chillwave trust fund. Viral typewriter fingerstache pinterest pork belly narwhal. Schlitz venmo everyday carry kitsch pitchfork chillwave iPhone taiyaki trust fund hashtag kinfolk microdosing gochujang live-edge",
-    "category": "bedroom"
+    "name": "Time-Warping Top Hat",
+    "price": 20100,
+    "featured": false,
+    "stock": 10,
+    "image": "https://v5.airtableusercontent.com/v1/20/20/1692720000000/U0-nHk4InKlghCuXBwalpg/y7LIoNS100dh_WCt23VkTmI6VkGD6WwrUsJOZtD-w-ZLaIU1Y3OZJ8i9R_dGln5nwfwyyC_9oA3LPSs8AF6QqKXsVhTrVgdS94H0ddAjUSk_xu3-PA4V9VZ_cbYYUCdIuxP3ZwkhiGu2s6wGjD_YDA/3lXt5kOGZUWq73se4-EKsre12Of5qeWtwqcC8FBE7z4",
+    "category": "Quantum Curiosities",
+    "description": "Elevate your time-travel style with the Time-Warping Top Hat from TimeHopper Co. Step into history elegantly with this hat that's not just headgear—it's a portal to eras past and future. A top hat that transcends fashion trends.",
+    "colors": [
+      "#3498DB",
+      "#E74C3C"
+    ],
+    "company": "EpochWear Inc.",
+    "stars": 2.0,
+    "reviews": 50
   }
 ]
