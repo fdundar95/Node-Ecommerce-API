@@ -55,7 +55,7 @@ const ProductSchema = new mongoose.Schema({
         type: Number,
         default: 0
     },
-    reviews: {
+    numOfReviews: {
         type: Number,
         default: 0
     },
@@ -65,7 +65,27 @@ const ProductSchema = new mongoose.Schema({
         required: true
     }
 }, {
-    timestamps: true
+    timestamps: true, toJSON: { virtuals: true }, toObject: { virtuals: true }
 });
+
+// Can't query with virtuals in MongoDB !!
+ProductSchema.virtual('reviews', {
+    // Establishing a relationship between the Product model and the Review model
+    ref: 'Review',
+    // based on the _id field of the Product model ...
+    localField: '_id',
+    // and the product field of the Review model
+    foreignField: 'product', // Specifies that the foreign field in the "Review" model to match is the product field
+    justOne: false, // Specifies that multiple reviews can be associated with a single product
+    // match: { rating: 5 } // Only return reviews with a rating of 5
+});
+
+ProductSchema.pre(
+    "deleteOne",
+    { document: true, query: false },
+    async function () {
+        await this.model("Review").deleteMany({ product: this._id });
+    }
+);
 
 module.exports = mongoose.model('Product', ProductSchema);
