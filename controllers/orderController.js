@@ -20,12 +20,15 @@ const createOrder = async (req, res) => {
     let orderItems = [];
     let subtotal = 0;
 
+    // Loop through each cart item
     for (const item of cartItems) {
+        // Find the product in the database
         const dbProduct = await Product.findOne({ _id: item.product });
         if (!dbProduct) {
             throw new CustomError.NotFoundError(`No product with id: ${item.product}`);
         }
         const { name, price, image, _id } = dbProduct;
+        // Create a single order item to add to the order
         const singleOrderItem = {
             amount: item.amount,
             name,
@@ -33,14 +36,14 @@ const createOrder = async (req, res) => {
             image,
             product: _id
         };
-        // add the single order item to the orderItems array
+        // Add the single order item to the orderItems array
         orderItems.push(singleOrderItem);
-        // calculate subtotal
+        // Calculate subtotal
         subtotal += item.amount * price;
     }
-    // calculate total
+    // Calculate total
     const total = subtotal + tax + shippingFee;
-    // get client secret
+    // Get client secret
     const paymentIntent = await fakeStripeAPI({
         amount: total,
         currency: 'usd'
@@ -55,7 +58,7 @@ const createOrder = async (req, res) => {
         clientSecret: paymentIntent.client_secret,
         user: req.user.userId
     });
-    res.status(StatusCodes.CREATED).json({ order, });
+    res.status(StatusCodes.CREATED).json({ order });
 };
 
 const getAllOrders = async (req, res) => {
@@ -87,8 +90,11 @@ const updateOrder = async (req, res) => {
     if (!order) {
         throw new CustomError.NotFoundError('No order found');
     }
+    
     checkPermissions(req.user, order.user);
-    paymentIntentId && (order.paymentIntentId = paymentIntentId);
+
+    order.paymentIntentId = paymentIntentId;
+    order.status = 'paid';
     await order.save();
 };
 
