@@ -4,6 +4,7 @@ const CustomError = require('../errors');
 const path = require('path');
 
 const createProduct = async (req, res) => {
+    // Set the user ID from the authenticated user to the request body
     req.body.user = req.user.userId;
     const product = await Product.create(req.body);
     res.status(StatusCodes.CREATED).json({ product });

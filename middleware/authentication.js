@@ -18,6 +18,7 @@ const authenticateUser = async (req, res, next) => {
 };
 
 const authorizePermissions = (...roles) => {
+    // Return middleware function
     return (req, res, next) => {
         if (!roles.includes(req.user.role)) {
             throw new UnauthorizedError('Unauthorized to access this route');
