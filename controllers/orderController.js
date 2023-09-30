@@ -90,12 +90,13 @@ const updateOrder = async (req, res) => {
     if (!order) {
         throw new CustomError.NotFoundError('No order found');
     }
-    
+    console.log('cou');
     checkPermissions(req.user, order.user);
 
     order.paymentIntentId = paymentIntentId;
     order.status = 'paid';
     await order.save();
+    res.status(StatusCodes.OK).json({ order });
 };
 
 module.exports = {
